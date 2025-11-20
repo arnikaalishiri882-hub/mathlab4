@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>آزمایشگاه تعاملی مجموعه‌ها | MathLab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <div id="app">
+    <header>
+      <h1>آزمایشگاه تعاملی مجموعه‌ها</h1>
+      <div class="header-controls">
+        <select id="themeSelector" aria-label="انتخاب تم">
+          <option value="light" selected>☀️ تم روشن</option>
+          <option value="special">🌟 تم ویژه</option>
+          <option value="dark">🌙 تم تیره</option>
+        </select>
+        <div class="modeBtns">
+          <button id="shortBtn">پاسخ کوتاه</button>
+          <button id="longBtn">پاسخ طولانی</button>
+        </div>
+        <button id="verbalBtn">عبارت کلامی</button>
+      </div>
+    </header>
+
+    <main id="mainBox">
+      <p class="bold">به برنامه خوش‌آمدید! برای شروع یک حالت را انتخاب کنید.</p>
+      <div id="step" class="fade">
+        <p>برای شروع دکمهٔ «پاسخ کوتاه» یا «پاسخ طولانی» را بزنید.</p>
+      </div>
+
+      <div id="vennContainer" aria-hidden="true">
+        <svg id="venn" viewBox="0 0 360 200" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </main>
+
+    <button id="keyboardBtn" aria-haspopup="true">⌨️ کیبورد</button>
+
+    <!-- کیبورد ریاضی: داده‌ها با data-ch و دکمه‌های کنترلی -->
+    <div id="keyboard" aria-hidden="true">
+      <div class="row">
+        <button data-ch="∪">∪</button>
+        <button data-ch="∩">∩</button>
+        <button data-ch="−">−</button>
+        <button data-ch="∈">∈</button>
+        <button data-ch="⊂">⊂</button>
+        <button data-ch="⊄">⊄</button>
+        <button data-ch="∉">∉</button>
+      </div>
+      <div class="row">
+        <button data-ch="√">√</button>
+        <button data-ch="/">/</button>
+        <button data-ch="∅">∅</button>
+        <button data-ch=",">،</button>
+        <button data-ch="{">{</button>
+        <button data-ch="}">}</button>
+      </div>
+      <div class="row numbers">
+        <button data-ch="0">0</button><button data-ch="1">1</button><button data-ch="2">2</button>
+        <button data-ch="3">3</button><button data-ch="4">4</button><button data-ch="5">5</button>
+        <button data-ch="6">6</button><button data-ch="7">7</button><button data-ch="8">8</button>
+        <button data-ch="9">9</button>
+      </div>
+      <div class="row letters"></div>
+      <div class="row actions">
+        <button id="kbdSpace" data-ch=" ">فاصله</button>
+        <button id="kbdBack">حذف</button>
+        <button id="kbdClose">بستن</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
